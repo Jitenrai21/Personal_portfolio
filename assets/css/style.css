@@ -1,4 +1,4 @@
-*{
+body{
     background-color: black;
 }
 h1, h2, h3, h4, h5, p, a,button{
@@ -30,6 +30,7 @@ img{
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
 }
 .menu{
@@ -46,6 +47,41 @@ img{
     text-decoration: none;
     padding: 20px 20px;
 }
+.menu ul li a:hover{
+    font-size: larger;
+}
+#blog:hover{
+    color: aqua;
+
+}
+.right{
+    /* flex-basis: auto;
+    padding-left: 0%; */
+    width: 50%;
+    background-color: rgb(22, 17, 59);
+    
+}
+.left{
+    /* flex-basis: auto; */
+    width: 50%;
+    background-color: rgb(22, 17, 59);
+    text-decoration: none;
+    padding-left: 100px;
+    
+}
+.right img{
+    border-radius: 30%;
+    height: 70%;
+    width: 70%;
+    /* float: right;
+    padding-right: 60px; */
+    
+   
+    
+}
 /* .inez{
     background-size: 500px 1000px;
 } */
+.intro{
+    background-color: rgb(22, 17, 59);
+}

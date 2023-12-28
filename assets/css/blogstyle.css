@@ -1,0 +1,13 @@
+*{
+    background-color: black;
+    font-size: large;
+    font-style: italic;
+    color: aliceblue;
+}
+h1{
+    float: center;
+ 
+}
+p{
+    color: aqua;
+}
