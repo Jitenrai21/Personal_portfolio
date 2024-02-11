@@ -85,3 +85,37 @@ img{
 .intro{
     background-color: rgb(22, 17, 59);
 }
+.portfolio-footer {
+    background-color: #000000;
+    padding: 20px 0;
+    color: #ffffff;
+  }
+  
+  .portfolio-footer p {
+    margin-bottom: 0;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-links a {
+    color: #666;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+  
