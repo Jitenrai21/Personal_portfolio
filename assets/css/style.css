@@ -27,6 +27,7 @@ img{
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    height: fit-content;
 }
 .menu {
     flex: 1;
