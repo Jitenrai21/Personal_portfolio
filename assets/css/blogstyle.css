@@ -7,6 +7,7 @@ body{
     font-size: large;
     font-style: italic;
     color: aliceblue;
+    text-decoration: none;
 }
 
 header{
@@ -21,4 +22,35 @@ header{
     /* display: flex; */
     justify-content: center;
     text-align: center;
+}
+.logo{
+    width: 10%;
+    padding-left: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: fit-content;
+}
+.menu {
+    flex: 1;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+}
+.menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: aliceblue;
+}
+.menu ul li a:hover{
+    font-weight: bold;
+}
+img{
+    width: 100%;
 }
