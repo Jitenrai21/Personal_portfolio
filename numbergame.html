@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter a number">
+    <button type="button" id="add-new-item" onclick="addNumber()">Enter</button><br>
+    <span id="sum">0</span><br>
+    <span id="show-calculating"></span>
+</body>
+<script>
+    let sum = 0;
+    function addNumber(){
+        let myValue = document.getElementById('number').value;
+        if(!myValue){
+            alert('Enter a number between 1-3 please!!');
+            return;
+        }
+        myValue = parseInt(myValue);
+        if(myValue<1 || myValue>3){
+            alert('Enter a number between 1-3 please!!');
+            return;
+        }
+        sum+=myValue;
+        document.getElementById('sum').innerHTML = sum;
+        document.getElementById('number').value = '';
+        if(sum>=20){
+            alert('My Baebaeegurlll Inez won it!!');
+            sum = 0;
+            return;
+        }
+        document.getElementById('show-calculating').innerHTML = 'Computer is calculating...';
+        setTimeout(() => {
+            document.getElementById('show-calculating').innerHTML ='';
+            let computerNumber = Math.ceil(Math.random(0,3)*3);
+            sum += computerNumber;
+            document.getElementById('sum').innerHTML = sum;
+            if(sum>=20){
+                alert('Oopss.. computer wins.. you lose!!');
+                sum = 0;
+                return;
+            }
+        }, 1000);
+
+        
+    }
+</script>
+</html>

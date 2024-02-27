@@ -6,7 +6,7 @@ body {
     background-color: black;
 }
 h1 , h3, h4, h5, p, a, button{
-    color: antiquewhite;
+    color: rgb(250, 235, 215);
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
 }
@@ -20,7 +20,7 @@ img{
 }
 .logo{
     width: 10%;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .container{
     display: flex;
@@ -67,14 +67,7 @@ img{
     background-color: var(--main-color);
     width: 100%;
 }
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    bottom: 0;
-}
+
 .social-links{
     display: flex;
     justify-content: left;
@@ -83,3 +76,28 @@ footer{
 .social-links a{
     padding-right: 20px;
 }
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_container{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+  .right_footer{
+    width: 10%;
+    padding-right: 30px;
+}
+.left_footer{
+    width: 90%;
+    
+}  
+
+
