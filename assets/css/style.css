@@ -20,8 +20,12 @@ img{
     width: 100%;
 }
 .logo{
-    width: 5%;
-    padding-left: 30px;
+    width: 100px;
+    /* padding: 10px; */
+}
+.logo img{
+    width: 100%;
+    height: auto;
 }
 .container{
     display: flex;
@@ -80,28 +84,94 @@ img{
 footer{
     background-color: black;
     color: var(--text-color);
-    text-align: center;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
 .footer_container{
     width: 100%;
     display: flex;
+    justify-content: center;
     height: fit-content;
     align-items: center;
 }
-  .right_footer{
-    width: 15%;
+.footer_logo{
+    width: 120px;
+    height: auto;
     padding-right: 30px;
+} 
+.copyright{
+    text-align: center;
 }
-.left_footer{
-    width: 90%;
-}  
-main{
+.copyright p{
+    margin: 20px;
+}
+.hr{
+    width: 50%;
+    /* margin: 0px auto; */
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    color: var(--text-color);
+}
+hr{
+    margin: 0 auto;
+}
+.f_links{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+#descript{
+    size: 2px;
+}
+.skills-section{
+    padding: 50px 0;
     background-color: var(--main-color);
-    align-items: center;
+}
+.skills-list ul{
+    list-style: none;
+    padding: 0;
+}
+.skills-section h2{
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.skills-list ul li{
+    margin-bottom: 10px;
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.experience-section{
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.exp-item{
+    margin-bottom: 30px;
+}
+.exp-item h3{
+    margin-bottom: 5px;
+}
+.aboutpage{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.about_intro h2{
+    color: var(--text-color);
+}
+.about_passion h3, .about_mission h3{
+    margin-top: 30px;
+}
+.about_passion p, .about_mission p, .about_intro p{
+    line-height: 1.6;
 }
 .contact_container{
     max-width: 700px;
@@ -112,9 +182,6 @@ main{
     border-radius: 8px;
     box-shadow: 0 0 20px rgb(41, 26, 88);
     font-family: 'Times New Roman', Times, serif; 
-}
-h1{
-    margin-top: 0;
 }
 label{
     font-weight: bold;
@@ -128,12 +195,25 @@ input[type="text"], input[type="tel"], input[type="email"],textarea{
     border-radius: 5px;
 }
 input[type="submit"]{
-    background-color: #4CAF50;
+    background-color: #308433;
     border-radius: 5px;
     border: 1px solid;
     width: 100%;
     padding: 14px;
     
 }
-
-
+input[type="submit"]:hover{
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.resume_content{
+    background-color: var(--main-color);
+    padding: 40px;
+    color: var(--text-color);
+}
+.resume_content a{
+    font-weight: bolder;
+    color: rgb(59, 206, 206);
+}
