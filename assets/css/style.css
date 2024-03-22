@@ -217,3 +217,35 @@ input[type="submit"]:hover{
     font-weight: bolder;
     color: rgb(59, 206, 206);
 }
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 20px;
+    }
+    .menu{
+        text-align: right;
+    }
+    .menu ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    .menu ul li{
+        margin-bottom: 10px;
+    }
+    .menu ul li a{
+        display: block;
+        padding: 10px;
+    }
+    .right img{
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    .left{
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+}
