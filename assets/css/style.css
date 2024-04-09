@@ -173,6 +173,19 @@ hr{
 .about_passion p, .about_mission p, .about_intro p{
     line-height: 1.6;
 }
+.js{
+    color: var(--text-color);
+    text-align: center;
+}
+.js ul{
+    list-style: none;
+}
+#home-btn{
+    background-color: #308433;
+}
+#add-new-skill{
+    background-color: #308433;
+}
 .contact_container{
     max-width: 700px;
     margin: 0px auto;
@@ -227,6 +240,15 @@ input[type="submit"]:hover{
     /* .menu{
         text-align: right;
     } */
+    .menu.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--text-color);
+    }
     .menu ul{
         flex-direction: column;
         padding: 0;
