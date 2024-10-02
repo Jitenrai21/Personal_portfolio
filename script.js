@@ -1,6 +1,6 @@
-const skillsData = ["HTML", "CSS", "JavaScript"];
+const skillsData = ["HTML", "CSS", "JavaScript","Python (Django)","Pandas","Numpy","Matplotlib","AI/ML"];
 const experienceData = [
-    {position: "Manager", company: "Purba Paschim Construction and Suppliers", years: 3}
+    {position: "AI Engineer", company: "Make Believe Research Laboratory", years: 3}
 ];
 function displaySkills(){
     const skillsList = document.getElementById("skills-list");
