@@ -3,118 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JKR</title>
+    <meta name="description" content="Resume of Jiten Rai — BIT Student, Python & ML enthusiast from Nepal.">
+    <title>Resume — Jiten Rai</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 </head>
 <body>
-    <header>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
         <nav class="container">
             <div class="logo">
-                <img src="./assets/images/logo.png" alt="">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="Jiten Rai Logo"></a>
             </div>
-            <div class="menu">
+            <div class="menu-icon" id="menu-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu" id="main-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact me</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html" class="active">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="resume_content">
-        <section class="resume_prof">
-            <h2>Professional Summary</h2>
-            <p>
-                An enthusiastic learner with a passion for building intelligent systems through Python programming and machine learning. 
-                Skilled in developing data-driven solutions, with a strong focus on model accuracy and practical applications.
-                Dedicated to creating user-friendly and impactful machine learning models, while maintaining a deep interest in innovation and problem-solving.
-            </p>
-        </section>
-        <section class="education">
-            <h2>Education</h2>
-            <ul>
-                <li>School Leaving Certificate(SLC) - Loyalty Academy, 2015</li>
-                <li>+2 Levels - Xavier International College, 2017</li>
-                <li>Bachelor of Information Technology - Texas College of Management and IT, since 2022</li>
-            </ul>
-        </section>
-        <section class="work-exp">
-            <h2>Work Experience</h2>
-            <h3>Data Scientist</h3>
-            <p>Make Believe Research Laboratory</p>
-            <ul>
-                <li>An AI engineer wannabe.</li>
-                <li>Beginner in Machine Learning</li>
-            </ul>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5, CSS3, Javascript</li>
-                <li>Responsive Design</li>
-                <li>Flask, SQLite</li>
-                <li>Pandas, Numpy, Matplotlib</li>
-                <li>Artificial Intelligence/ Machine Learning</li>
-            </ul>
-        </section>
-        <section class="projects">
-            <h2>Projects or Portfolio</h2>
-            <ul>
-                <li><a href="https://github.com/Jitenrai21?tab=repositories">My GitHub Profile Link</a> - This is my GitHub profile that consists of the various projects that I have worked on.</li>
-            </ul>
-        </section>
-        <section class="achievements">
-            <h2>Achievements and Awards</h2>
-            <ul>
-                <li>First Position in Texas College Annual ECA meet, Futsal(boys)</li>
-            </ul>
-        </section>
-        <section class="references">
-            <h2>References:</h2>
-            <p>Available upon request.</p>
-        </section>
-        <section class="resume_contact">
-            <h2>Contact Information</h2>
-            <ul>
-                <li>Email: raijiten96@gmail.com</li>
-                <li>Phone: 9860270335</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/jiten-rai-42b540264/"> LinkedIn Profile</a></li>
-            </ul>
-        </section>
-    </div>
-    <footer>
-        <div class="footer_container">
-            <div class="footer_logo">
-                <img src="./assets/images/logo.png" alt="">
-            </div>
-            <div id="descript">
-                <p>A learner. <br> A Grinder. <br> An Student <br> Footballer for fun!
-                </p>
+
+    <!-- ===== RESUME HERO ===== -->
+    <section class="resume-hero">
+        <div class="container">
+            <h1>My <span style="color:var(--accent-color)">Resume</span></h1>
+            <p>A snapshot of my education, experience, skills, and achievements.</p>
+            <div class="hero-cta">
+                <a href="./assets/JitenRaiCV.pdf" download class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <a href="contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
             </div>
         </div>
-        <div class="f_links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/jiten.rai.jr10/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/jitenrai_jkr21/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/Jitenrai21"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </div>
-                <div class="copyright">
-                    <hr class="hr">
-                    <p>&copy; Jiten Koyee Rai Portfolio. All rights reserved!</p>
+    </section>
+
+    <!-- ===== RESUME CONTENT ===== -->
+    <main>
+        <div class="container">
+            <div class="resume-layout">
+
+                <!-- ===== LEFT COLUMN ===== -->
+                <div class="resume-col">
+
+                    <!-- Education -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3>Bachelor of Information Technology (BIT)</h3>
+                                <p class="timeline-org">Texas College of Management and IT</p>
+                                <p class="timeline-date">2022 — Present</p>
+                                <p>Studying core computing subjects including data structures, algorithms, databases, networking, and software engineering.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>+2 (Higher Secondary Education)</h3>
+                                <p class="timeline-org">Xavier International College</p>
+                                <p class="timeline-date">2015 — 2017</p>
+                                <p>Completed higher secondary education with a focus on Science.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>School Leaving Certificate (SLC)</h3>
+                                <p class="timeline-org">Loyalty Academy</p>
+                                <p class="timeline-date">2015</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Work Experience -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3>AI Intern</h3>
+                                <p class="timeline-org">Frost Digital Ventures &mdash; Lampati, Kalanki</p>
+                                <p class="timeline-date">Nov 2025 &mdash; Jan 2026</p>
+                                <ul>
+                                    <li>Accomplished multiple weekly projects spanning EDA, ML algorithms, CNN, LLM, and RAG pipelines.</li>
+                                    <li>Delivered detailed task submissions including calibration &amp; ablation on NN models, LoRA-PEFT fine-tuning, and evaluation reports on MRR and nDCG metrics.</li>
+                                    <li>Performed graph structure manipulation using NetworkX and Neo4j.</li>
+                                    <li>Applied ML experiment logging with MLflow and Weights &amp; Biases (WandB).</li>
+                                    <li>Developed a complete Developer Copilot application with VS Code extension delivery.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>Computer Vision Intern</h3>
+                                <p class="timeline-org">Danson Solutions &mdash; Gairidhara, Kathmandu</p>
+                                <p class="timeline-date">May 2025 &mdash; Aug 2025</p>
+                                <ul>
+                                    <li>Worked on multiple mini-projects in Computer Vision, YOLO object detection, and CNN architectures.</li>
+                                    <li>Led a team on a separate interactive game development project, performing to prolific production standards.</li>
+                                    <li>Explored Generative AI concepts and FastAPI endpoint generation for backend module delivery.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>Self-Directed ML Learner</h3>
+                                <p class="timeline-org">Personal Projects &amp; Online Courses</p>
+                                <p class="timeline-date">2022 &mdash; Present</p>
+                                <ul>
+                                    <li>Built classification and regression models using scikit-learn.</li>
+                                    <li>Conducted data analysis and visualization with Pandas and Matplotlib.</li>
+                                    <li>Explored deep learning fundamentals using Python.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Achievements -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-trophy"></i> Awards &amp; Activities</h2>
+                        <ul class="achievement-list">
+                            <li class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Winner</strong> &mdash; Texas Dev Rumble 2025 (One-Day Code Competition). Collaborated with a team to build an end-to-end web application featuring virtual study rooms with a session-based context-aware chatbot.</span>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Winner</strong> &mdash; Texas Hackathon 2025, Volume I. Collaborated with a team to develop a virtual assistant for visually impaired students.</span>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-microchip"></i>
+                                <span><strong>Robotics Expo</strong> &mdash; Sep 2025. Presented a group project on a Remote-Controlled IR Ray Sensor Light built with Arduino and IoT concepts.</span>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-medal"></i>
+                                <span><strong>1st Place</strong> &mdash; Texas College Annual ECA Meet, Futsal (Boys).</span>
+                            </li>
+                        </ul>
+                    </section>
+
                 </div>
+
+                <!-- ===== RIGHT COLUMN ===== -->
+                <div class="resume-col">
+
+                    <!-- Professional Summary -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
+                        <p>
+                            BIT student and aspiring AI Engineer with hands-on internship experience
+                            in Computer Vision (Danson Solutions) and AI/ML engineering (Frost Digital
+                            Ventures). Proficient in Python, Deep Learning, LLMs, RAG pipelines, and
+                            Computer Vision. Proven ability to deliver production-grade projects —
+                            from CNN model fine-tuning and LoRA-PEFT to RAG-powered VS Code extensions.
+                            Passionate about problem-solving, team collaboration, and building
+                            intelligent systems that create measurable value.
+                        </p>
+                    </section>
+
+                    <!-- Skills -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                        <ul class="skills-tag-list">
+                            <li class="skill-tag"><i class="fab fa-python"></i> Python</li>
+                            <li class="skill-tag"><i class="fas fa-brain"></i> Machine Learning</li>
+                            <li class="skill-tag"><i class="fas fa-robot"></i> Deep Learning</li>
+                            <li class="skill-tag"><i class="fas fa-eye"></i> Computer Vision</li>
+                            <li class="skill-tag"><i class="fas fa-comment-dots"></i> NLP / LLM</li>
+                            <li class="skill-tag"><i class="fas fa-search"></i> RAG</li>
+                            <li class="skill-tag"><i class="fas fa-table"></i> Pandas</li>
+                            <li class="skill-tag"><i class="fas fa-superscript"></i> NumPy</li>
+                            <li class="skill-tag"><i class="fas fa-chart-bar"></i> Matplotlib</li>
+                            <li class="skill-tag"><i class="fas fa-network-wired"></i> TensorFlow</li>
+                            <li class="skill-tag"><i class="fas fa-microscope"></i> scikit-learn</li>
+                            <li class="skill-tag"><i class="fas fa-database"></i> ChromaDB / Neo4j</li>
+                            <li class="skill-tag"><i class="fab fa-html5"></i> HTML5 &amp; CSS3</li>
+                            <li class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</li>
+                            <li class="skill-tag"><i class="fas fa-flask"></i> FastAPI / Flask</li>
+                            <li class="skill-tag"><i class="fas fa-terminal"></i> Django</li>
+                            <li class="skill-tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</li>
+                            <li class="skill-tag"><i class="fas fa-chart-line"></i> MLflow / WandB</li>
+                        </ul>
+                    </section>
+
+                    <!-- Projects -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-folder-open"></i> Projects</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h3>Projector Camera Interactive Balloon Pop Game</h3>
+                                <p class="timeline-org">Python, Pygame, OpenCV, Ultralytics YOLO, ONNX</p>
+                                <p>An interactive balloon-popping game using YOLO object detection (ONNX), OpenCV, and Pygame — supports camera calibration, perspective correction, and multi-monitor/projector setups.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>QuickDraw Game — AI-Powered Drawing Recognition</h3>
+                                <p class="timeline-org">Python, FastAPI, TensorFlow, Vanilla JS, Keras</p>
+                                <p>Full-stack AI drawing game with real-time CNN classification via FastAPI/Keras, confidence calibration, mobile support, and comprehensive API endpoints.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>Developer Copilot: AI RAG &amp; PR Summarization</h3>
+                                <p class="timeline-org">Python, ChromaDB, Groq, RAG, VS Code Extension (TypeScript)</p>
+                                <p>Intelligent developer productivity suite with RAG-powered codebase search and commit-level PR summarization using Groq (Llama-3.3-70B) and ChromaDB vector storage.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>MCQ Paper Grader</h3>
+                                <p class="timeline-org">Python, OpenCV, Streamlit, Pandas</p>
+                                <p>Web-based automated MCQ answer sheet grading using OpenCV bubble detection, Streamlit UI, and Pandas for result analysis and visualization.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact -->
+                    <section class="resume-block reveal">
+                        <h2><i class="fas fa-address-card"></i> Contact</h2>
+                        <ul class="achievement-list">
+                            <li class="achievement-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@jitenrai.com.np">info@jitenrai.com.np</a>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+9779860270335">+977 9860270335</a>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener">LinkedIn Profile</a>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/Jitenrai21" target="_blank" rel="noopener">github.com/Jitenrai21</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.png" alt="JKR Logo">
+                </div>
+                <p>A learner.<br>A grinder.<br>A BIT student.<br>Footballer for fun.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/jiten.rai.jr10/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/jitenrai_jkr21/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/Jitenrai21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Jiten Koyee Rai. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

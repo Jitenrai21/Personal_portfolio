@@ -3,75 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JKR</title>
+    <meta name="description" content="Contact Jiten Rai — reach out via email, phone, or social media.">
+    <title>Contact — Jiten Rai</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 </head>
 <body>
-    <header>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
         <nav class="container">
             <div class="logo">
-                <img src="./assets/images/logo.png" alt="">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="Jiten Rai Logo"></a>
             </div>
-            <div class="menu">
+            <div class="menu-icon" id="menu-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu" id="main-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact me</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <!-- ===== CONTACT HERO ===== -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In <span style="color:var(--accent-color)">Touch</span></h1>
+            <p>Have a project, opportunity, or just want to say hello? I'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT CONTENT ===== -->
     <main>
-        <div class="contact_container">
-            <h1>Contact Me</h1>
-            <form action="" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="address">Address</label><br>
-                <input type="text" id="address" name="address" required><br>
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" name="number" id="phone" required><br>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" ><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-                <input type="submit" value="Submit">
-            </form>
+        <div class="container">
+            <div class="contact-layout" style="padding: 70px 0;">
+
+                <!-- Left: Info -->
+                <div class="contact-info-block">
+
+                    <div class="contact-info-card reveal">
+                        <h3><i class="fas fa-envelope"></i> &nbsp;Email</h3>
+                        <a href="mailto:info@jitenrai.com.np">
+                            <i class="fas fa-arrow-right" style="font-size:0.7rem;color:var(--accent-color)"></i>
+                            info@jitenrai.com.np
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card reveal">
+                        <h3><i class="fas fa-phone"></i> &nbsp;Phone</h3>
+                        <a href="tel:+9779860270335">
+                            <i class="fas fa-arrow-right" style="font-size:0.7rem;color:var(--accent-color)"></i>
+                            +977 9860270335
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card reveal">
+                        <h3><i class="fab fa-linkedin"></i> &nbsp;LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener">
+                            <i class="fas fa-arrow-right" style="font-size:0.7rem;color:var(--accent-color)"></i>
+                            linkedin.com/in/jiten-rai-42b540264
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card reveal">
+                        <h3><i class="fab fa-github"></i> &nbsp;GitHub</h3>
+                        <a href="https://github.com/Jitenrai21" target="_blank" rel="noopener">
+                            <i class="fas fa-arrow-right" style="font-size:0.7rem;color:var(--accent-color)"></i>
+                            github.com/Jitenrai21
+                        </a>
+                    </div>
+
+                    <div class="contact-info-card contact-social reveal">
+                        <h3>Social</h3>
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/jiten.rai.jr10/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/jitenrai_jkr21/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://github.com/Jitenrai21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-block reveal">
+                    <h2>Send a Message</h2>
+                    <!--
+                    ╔══ FORMSPREE SETUP (one-time, free) ═══════════════════════════╗
+                    ║  1. Go to https://formspree.io and sign up / log in.          ║
+                    ║  2. Click "New Form", name it "Portfolio Contact".            ║
+                    ║  3. Set the notification email to: info@jitenrai.com.np       ║
+                    ║  4. Copy your form endpoint ID (looks like: xyzabcde)         ║
+                    ║  5. Replace YOUR_FORM_ID below with that ID and save.         ║
+                    ║  No backend needed — works on any static host (Cloudflare,    ║
+                    ║  GitHub Pages, Netlify, etc.).                                ║
+                    ╚═══════════════════════════════════════════════════════════════╝
+                    -->
+                    <form id="contact-form" action="https://formspree.io/f/mreyeeoz" method="POST" novalidate>
+
+                        <div class="form-row">
+                            <div class="form-group" id="fg-name">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your full name" autocomplete="name">
+                                <span class="error-msg">Please enter your name.</span>
+                            </div>
+                            <div class="form-group" id="fg-email">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email">
+                                <span class="error-msg">Please enter a valid email.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="fg-subject">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" name="subject" placeholder="What's this about?">
+                            <span class="error-msg">Please enter a subject.</span>
+                        </div>
+
+                        <div class="form-group" id="fg-message">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                            <span class="error-msg">Please enter your message.</span>
+                        </div>
+
+                        <!-- Formspree: route replies back to the sender's address -->
+                        <input type="hidden" name="_replyto" id="_replyto">
+
+                        <!-- Formspree: override email subject line -->
+                        <input type="hidden" name="_subject" id="_subject" value="New message from portfolio contact form">
+
+                        <!-- Formspree honeypot — hidden from real users, catches bots -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <!-- Formspree: redirect back to same page after submission (fallback if JS fails) -->
+                        <input type="hidden" name="_next" value="">
+
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                    </form>
+
+                    <div class="form-success" id="form-success">
+                        <i class="fas fa-check-circle" style="font-size:1.4rem;margin-bottom:8px;display:block;"></i>
+                        Thank you! Your message has been sent. I'll get back to you soon.
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="footer_container">
-            <div class="footer_logo">
-                <img src="./assets/images/logo.png" alt="">
-            </div>
-            <div id="descript">
-                <p>A learner. <br> A Grinder. <br> An Student <br> Footballer for fun!
-                </p>
-            </div>
-        </div>
-        <div class="f_links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/jiten.rai.jr10/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/jitenrai_jkr21/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/Jitenrai21"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </div>
-                <div class="copyright">
-                    <hr class="hr">
-                    <p>&copy; Jiten Koyee Rai Portfolio. All rights reserved!</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.png" alt="JKR Logo">
                 </div>
+                <p>A learner.<br>A grinder.<br>A BIT student.<br>Footballer for fun.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/jiten.rai.jr10/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/jitenrai_jkr21/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/Jitenrai21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Jiten Koyee Rai. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

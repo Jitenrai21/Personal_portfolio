@@ -3,100 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <meta name="description" content="About Jiten Rai — BIT Student, Python & ML enthusiast from Nepal.">
+    <title>About — Jiten Rai</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 </head>
 <body>
-    <header>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
         <nav class="container">
             <div class="logo">
-                <img src="./assets/images/logo.png" alt="">
+                <a href="index.html"><img src="./assets/images/logo.png" alt="Jiten Rai Logo"></a>
             </div>
-            <div class="menu">
+            <div class="menu-icon" id="menu-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu" id="main-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact me</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-   <div class="intro">
-    <div class="aboutpage">
-    <section class="about_intro">
-        <h2>Hi, I'm Jiten Rai.</h2>
-        <p>I am an student passionate about about daily, gradual and consistent improvement. <br>
-            Welcome to my world of curiosity and creativity, where passion meets purpose and drives meaningful change. 
-            I am Jiten Rai, a dedicated individual with a relentless drive to explore, innovate, and inspire. 
-            Through my journey, I have cultivated a deep appreciation for learning and growing, fueling my commitment to making a positive impact on the world around me.
-        </p>
-    </section>
-    <hr class="hr">
-    <section class="about_passion">
-        <h3>Passion and Interests</h3>
-        <p>I am passionate on learning and i find football interesting. <br>
-            I am a passionate Python programming enthusiast with a strong interest in machine learning and data science. 
-            My curiosity drives me to explore the latest technologies, and I enjoy solving complex problems through code and data-driven solutions. 
-            Alongside my technical pursuits, I am deeply passionate about football and physical fitness, both of which inspire me to stay disciplined and focused in all aspects of my life.
-        </p>    
-    </section>
-    <hr class="hr">
-    <section class="about_mission">
-        <h3>Mission or Vision</h3>
-        <p>My mission is to achieve an stability and freedom in life. <br>
-        I strive to succeed, aiming for a consistent growth and lessons. <br>
-        Through my work, I aim to be happy and satisfied.</p>
-    </section>
-    <section class="js">
-        <div id="skills-section">
-            <h2>Skills</h2>
-            <ul id="skills-list"></ul>
-            <input type="textarea" placeholder="Add New Skills" id="name">
-            <button type="button" id="add-new-skill" onclick="addNewSkill(this)">Add New Skill</button>
-            <ul id="menu"></ul>
-        </div>
-        <div id="experience-section">
-            <h2>Experience</h2>
-            <ul id="experience-list"></ul>
+
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About <span style="color:var(--accent-color)">Me</span></h1>
+            <p>
+                Curious mind. Consistent learner. Aspiring AI Engineer.
+                Here's a little more about who I am and what drives me.
+            </p>
         </div>
     </section>
-    </div>  
-    <button id="home-btn">Go to Home</button>
-   </div>
-   <script src="script.js"></script>
-    <footer>
-        <div class="footer_container">
-            <div class="footer_logo">
-                <img src="./assets/images/logo.png" alt="">
-            </div>
-            <div id="descript">
-                <p>A learner. <br> A Grinder. <br> An Student <br> Footballer for fun!
-                </p>
-            </div>
-        </div>
-        <div class="f_links">
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/jiten.rai.jr10/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/jitenrai_jkr21/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/Jitenrai21"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </div>
-                <div class="copyright">
-                    <hr class="hr">
-                    <p>&copy; Jiten Koyee Rai Portfolio. All rights reserved!</p>
+
+    <!-- ===== ABOUT CONTENT ===== -->
+    <main>
+        <div class="container">
+            <div class="about-grid">
+
+                <!-- Left: Photo -->
+                <div class="about-img-block reveal">
+                    <img src="./assets/images/aboutimg.jpg" alt="Jiten Rai">
                 </div>
+
+                <!-- Right: Cards -->
+                <div class="about-text-block">
+
+                    <div class="about-card reveal">
+                        <h3><i class="fas fa-user"></i> Who I Am</h3>
+                        <p>
+                            I'm Jiten Rai, a dedicated Bachelor of Information Technology (BIT)
+                            student at Texas College of Management and IT, Nepal. I'm passionate
+                            about daily, gradual, and consistent self-improvement — in technology
+                            and in life. I believe in the power of curiosity, creativity, and
+                            perseverance to drive meaningful change in the world around me.
+                        </p>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <h3><i class="fas fa-fire"></i> Passion &amp; Interests</h3>
+                        <p>
+                            I'm a Python programming enthusiast with a strong interest in Machine
+                            Learning, Deep Learning, and Data Science. I enjoy solving complex
+                            problems through code and data-driven solutions — finding patterns in
+                            data that tell meaningful stories. Beyond technology, I have a deep
+                            passion for football and physical fitness, which keep me disciplined,
+                            focused, and energized in everything I do.
+                        </p>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <h3><i class="fas fa-bullseye"></i> Mission &amp; Vision</h3>
+                        <p>
+                            My mission is to grow consistently as an engineer and as a person —
+                            building intelligent systems that solve real problems. I strive to
+                            achieve financial stability and personal freedom through purposeful
+                            work, while staying grounded in lifelong learning. My vision is to
+                            become a skilled AI Engineer who contributes to Nepal's growing tech
+                            ecosystem and beyond.
+                        </p>
+                    </div>
+
+                    <div class="about-card reveal">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <p>
+                            <strong>BIT (Bachelor of Information Technology)</strong> — Texas College of Management and IT, 2022–Present<br>
+                            <strong>+2 (Science)</strong> — Xavier International College, 2017<br>
+                            <strong>SLC</strong> — Loyalty Academy, 2015
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SKILLS (About Page) ===== -->
+        <section class="skills-about-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Skills &amp; Proficiency</h2>
+                </div>
+                <div class="skills-about-grid">
+
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Python</span><span>85%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Machine Learning</span><span>75%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Pandas &amp; NumPy</span><span>80%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>HTML5 &amp; CSS3</span><span>82%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>JavaScript</span><span>65%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Flask / Django</span><span>60%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Matplotlib</span><span>78%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-bar-item reveal">
+                        <div class="skill-bar-label"><span>Git &amp; GitHub</span><span>72%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.png" alt="JKR Logo">
+                </div>
+                <p>A learner.<br>A grinder.<br>A BIT student.<br>Footballer for fun.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/jiten.rai.jr10/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/jitenrai_jkr21/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jiten-rai-42b540264/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/Jitenrai21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Jiten Koyee Rai. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
