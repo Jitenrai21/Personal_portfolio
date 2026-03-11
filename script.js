@@ -6,8 +6,9 @@
      3. Typed text effect on hero
      4. Scroll reveal (IntersectionObserver)
      5. Animated skill bars (about page)
-     6. Contact form validation + success state
-     7. Active nav link highlight
+     6. GitHub language stats (about page)
+     7. Contact form validation + success state
+     8. Active nav link highlight
    ============================================= */
 
 'use strict';
@@ -131,7 +132,116 @@ if (skillBars.length) {
 }
 
 /* -------------------------------------------
-   6. CONTACT FORM — client-side validation
+   6. GITHUB LANGUAGE STATS (about.html)
+      Fetches all repos for Jitenrai21, aggregates
+      language bytes, and renders animated skill bars.
+      Results are cached in sessionStorage for 1 hour.
+------------------------------------------- */
+(function githubLangStats() {
+    const grid = document.getElementById('github-skills-grid');
+    if (!grid) return;
+
+    const GITHUB_USER = 'Jitenrai21';
+    const CACHE_KEY   = 'gh_lang_stats_v1';
+    const CACHE_TTL   = 60 * 60 * 1000; // 1 hour
+
+    // Exclude markup / config / data formats — keep real languages
+    const EXCLUDE = new Set([
+        'HTML', 'CSS', 'Makefile', 'Dockerfile', 'Shell',
+        'Batchfile', 'PowerShell', 'CMake', 'Roff', 'TeX',
+        'SCSS', 'Less', 'Smarty', 'Mustache'
+    ]);
+
+    function observeBar(bar) {
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => { bar.style.width = bar.getAttribute('data-width') + '%'; }, 200);
+                    obs.unobserve(bar);
+                }
+            });
+        }, { threshold: 0.3 });
+        obs.observe(bar);
+    }
+
+    function observeReveal(el) {
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        obs.observe(el);
+    }
+
+    function renderBars(data) {
+        grid.innerHTML = data.map(({ name, pct }) => `
+            <div class="skill-bar-item reveal">
+                <div class="skill-bar-label"><span>${name}</span><span>${pct}%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-width="${pct}"></div></div>
+            </div>`).join('');
+
+        grid.querySelectorAll('.skill-bar-fill').forEach(observeBar);
+        grid.querySelectorAll('.reveal').forEach(observeReveal);
+    }
+
+    function showError() {
+        grid.innerHTML = '<p class="skills-error"><i class="fas fa-exclamation-circle"></i> Could not load GitHub stats right now.</p>';
+    }
+
+    async function fetchStats() {
+        // Return cached data if fresh
+        try {
+            const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || 'null');
+            if (cached && (Date.now() - cached.ts) < CACHE_TTL) return cached.data;
+        } catch (_) { /* ignore */ }
+
+        const headers = { Accept: 'application/vnd.github+json' };
+
+        // 1 request — all owned repos (up to 100)
+        const reposRes = await fetch(
+            `https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&type=owner`,
+            { headers }
+        );
+        if (!reposRes.ok) throw new Error('repos fetch failed');
+        const repos = await reposRes.json();
+
+        // N requests in parallel — language bytes per repo
+        const langMaps = await Promise.all(
+            repos.map(r =>
+                fetch(r.languages_url, { headers })
+                    .then(res => res.ok ? res.json() : {})
+                    .catch(() => ({}))
+            )
+        );
+
+        // Aggregate bytes, excluding markup/config files
+        const totals = {};
+        langMaps.forEach(map => {
+            Object.entries(map).forEach(([lang, bytes]) => {
+                if (!EXCLUDE.has(lang)) totals[lang] = (totals[lang] || 0) + bytes;
+            });
+        });
+
+        const sorted = Object.entries(totals).sort(([, a], [, b]) => b - a).slice(0, 10);
+        const max    = sorted[0]?.[1] || 1;
+        const data   = sorted.map(([name, bytes]) => ({
+            name,
+            pct: Math.max(1, Math.round((bytes / max) * 100))
+        }));
+
+        // Cache result
+        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch (_) { /* ignore */ }
+        return data;
+    }
+
+    fetchStats().then(renderBars).catch(showError);
+}());
+
+/* -------------------------------------------
+   7. CONTACT FORM — client-side validation
       Works with Formspree (static-hosting safe)
 ------------------------------------------- */
 const contactForm = document.getElementById('contact-form');
