@@ -59,11 +59,13 @@ if (menuToggle && mainMenu) {
 const typedEl = document.getElementById('typed-text');
 if (typedEl) {
     const phrases = [
-        'BIT Student',
+        'Technical Founder',
+        'Business Systems Architect',
+        'Operations Lead',
+        'Data-Driven Manager',
         'Python Developer',
-        'ML Enthusiast',
         'Aspiring AI Engineer',
-        'Data Science Learner',
+        'Data Science Enthusiast',
         'Footballer for Fun'
     ];
     let pIdx = 0, cIdx = 0, deleting = false;
