@@ -60,12 +60,12 @@ const typedEl = document.getElementById('typed-text');
 if (typedEl) {
     const phrases = [
         'Technical Founder',
-        'Business Systems Architect',
-        'Operations Lead',
-        'Data-Driven Manager',
         'Python Developer',
         'Aspiring AI Engineer',
+        'Operations Lead',
+        'Business Systems Architect',
         'Data Science Enthusiast',
+        'Data-Driven Manager',
         'Footballer for Fun'
     ];
     let pIdx = 0, cIdx = 0, deleting = false;
