@@ -1,4 +1,4 @@
-# Jiten Rai — Personal Portfolio
+# Jiten Rai - Personal Portfolio
 
 > A clean, responsive personal portfolio website built with vanilla HTML, CSS, and JavaScript.
 
